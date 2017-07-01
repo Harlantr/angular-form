@@ -9,8 +9,14 @@ import { SimpleFormComponent } from './forms/simple-form/simple-form.component';
 import { ValidatedFormComponent } from './forms/validated-form/validated-form.component';
 import { FormsComponent } from './forms/forms.component';
 import { HttpObservablesComponent } from './http-observables/http-observables.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+    {
+        path: '',
+        component: HomeComponent
+    },
     {
         path: 'forms',
         component: FormsComponent
@@ -18,7 +24,10 @@ const routes: Routes = [
     {
         path: 'http-observables',
         component: HttpObservablesComponent
-    }
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -34,7 +43,9 @@ const routes: Routes = [
         SimpleFormComponent,
         ValidatedFormComponent,
         FormsComponent,
-        HttpObservablesComponent
+        HttpObservablesComponent,
+        PageNotFoundComponent,
+        HomeComponent
     ],
     bootstrap: [
         AppComponent

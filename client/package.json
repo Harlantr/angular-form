@@ -1,8 +1,8 @@
 {
-  "name": "angular-io-example",
-  "version": "1.0.0",
+  "name": "angular-playground",
+  "version": "0.0.1",
   "private": true,
-  "description": "Example project from an angular.io guide.",
+  "description": "A sandbox for learning Angular 2+",
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --bail",
