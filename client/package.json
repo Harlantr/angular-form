@@ -37,6 +37,7 @@
     "@angular/platform-browser": "~4.2.0",
     "@angular/platform-browser-dynamic": "~4.2.0",
     "@angular/platform-server": "~4.2.0",
+    "@angular/router": "^4.2.5",
     "@angular/tsc-wrapped": "~4.2.0",
     "angular-in-memory-web-api": "~0.3.2",
     "bootstrap-css-only": "^3.3.7",
