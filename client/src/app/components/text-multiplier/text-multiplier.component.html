@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row panel panel-default">
+        <div class="panel-heading">Input</div>
+        <div class="col-md-10">
+            <div class="form-group">
+                <label>Text</label>
+                <input type="text" #txtUserString class="form-control" (keyup)="propagateUserString(txtUserString.value, txtNumberOfInstances.value)">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Number of Instances</label>
+                <input type="number" #txtNumberOfInstances class="form-control" (keyup)="propagateUserString(txtUserString.value, txtNumberOfInstances.value)" value="1">
+            </div>
+        </div>
+    </div>
+    <div class="row panel panel-default">
+        <div class="panel-heading">Output</div>
+        <div class="col-md-12">
+            <pre><div *ngFor="let instance of instances">{{instance}}</div></pre>
+        </div>
+    </div>
+</div>

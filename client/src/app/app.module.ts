@@ -4,13 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ComplexFormComponent } from './forms/complex-form/complex-form.component';
-import { SimpleFormComponent } from './forms/simple-form/simple-form.component';
-import { ValidatedFormComponent } from './forms/validated-form/validated-form.component';
-import { FormsComponent } from './forms/forms.component';
-import { HttpObservablesComponent } from './http-observables/http-observables.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HomeComponent } from './home/home.component';
+import { ComplexFormComponent } from './components/forms/complex-form/complex-form.component';
+import { SimpleFormComponent } from './components/forms/simple-form/simple-form.component';
+import { ValidatedFormComponent } from './components/forms/validated-form/validated-form.component';
+import { FormsComponent } from './components/forms/forms.component';
+import { HttpObservablesComponent } from './components/http-observables/http-observables.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HomeComponent } from './components/home/home.component';
+
+import {EmitterService} from './emitter.service';
+import { TextMultiplierComponent } from './components/text-multiplier/text-multiplier.component';
 
 const routes: Routes = [
     {
@@ -26,8 +29,13 @@ const routes: Routes = [
         component: HttpObservablesComponent
     },
     {
+        path: 'text-multiplier',
+        component: TextMultiplierComponent
+    },
+    {
         path: '**',
-        component: PageNotFoundComponent }
+        component: PageNotFoundComponent
+    }
 ];
 
 @NgModule({
@@ -45,11 +53,14 @@ const routes: Routes = [
         FormsComponent,
         HttpObservablesComponent,
         PageNotFoundComponent,
-        HomeComponent
+        HomeComponent,
+        TextMultiplierComponent
     ],
     bootstrap: [
         AppComponent
     ],
-    providers: []
+    providers: [
+        EmitterService
+    ]
 })
 export class AppModule { }
